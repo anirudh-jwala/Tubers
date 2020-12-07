@@ -2,11 +2,11 @@ from django.shortcuts import render
 
 
 def login(request):
-    pass
+    return render(request, 'accounts/login.html')
 
 
 def register(request):
-    pass
+    return render(request, 'accounts/register.html')
 
 
 def logout_user(request):
@@ -14,4 +14,4 @@ def logout_user(request):
 
 
 def dashboard(request):
-    pass
+    return render(request, 'accounts/dashboard.html')
