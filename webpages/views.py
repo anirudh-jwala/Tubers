@@ -24,7 +24,13 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'webpages/about.html')
+    teams = Team.objects.all()
+
+    data = {
+        'teams': teams,
+    }
+
+    return render(request, 'webpages/about.html', data)
 
 
 def services(request):
